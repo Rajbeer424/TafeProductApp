@@ -15,6 +15,7 @@ namespace ProductApps
         private decimal wrapping;
         private decimal gst;
         private decimal totalCharge;
+        private decimal totalWrapCharge;
 
         private decimal Price
         {
@@ -80,5 +81,11 @@ namespace ProductApps
             totalCharge = Price * Quantity + 25;
             return totalCharge;
         }
+        public decimal calWrapTotalCharge()
+        {
+            totalWrapCharge = Price * Quantity + 25 + 5;
+            return totalWrapCharge;
+        }
+
     }
 }
